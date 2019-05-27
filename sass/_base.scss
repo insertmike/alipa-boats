@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family:  $font-primary;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 1.6;
+
+}
+
+body {
+    box-sizing: border-box;
+}
+
+// GRID
+
+.container {
+  display: grid;
+  grid-template-rows: 8vh min-content ;
+
+}
