@@ -1,5 +1,6 @@
 .summer {
     &__gallery {
     background-color: $color-green-dark-2;
+    grid-column: full-start / full-end;
     }
 }

@@ -16,12 +16,21 @@ html{
 
 body {
     box-sizing: border-box;
+    height: 200vh;
 }
 
+* {
+    font-size: 2rem;
+    
+}
 // GRID
 
 .container {
+  margin-left: $navigation-width;
   display: grid;
-  grid-template-rows: 8vh min-content ;
+  
+  grid-template-rows: 90vh repeat(6, min-content);
+  // 1 fr between the navigation and the content from both sides to center it
+  grid-template-columns: [sidenav-end full-start] minmax(4rem,1fr) [center-start] repeat(6,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
 
 }

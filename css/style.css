@@ -12,29 +12,48 @@ html {
   line-height: 1.6; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 200vh; }
+
+* {
+  font-size: 2rem; }
 
 .container {
+  margin-left: 15rem;
   display: grid;
-  grid-template-rows: 8vh min-content; }
+  grid-template-rows: 90vh repeat(6, min-content);
+  grid-template-columns: [sidenav-end full-start] minmax(4rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end]; }
 
 .navigation {
-  background-color: #5ee0aa; }
+  background-color: #5ee0aa;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 15rem; }
 
 .header {
-  background-color: #777; }
+  background-color: #777;
+  grid-column: full-start / full-end; }
 
 .catalog {
-  background-color: #46a739; }
+  background-color: #46a739;
+  grid-column: center-start / center-end; }
 
 .find-us {
-  background-color: #2e537e; }
+  background-color: #2e537e;
+  grid-column: full-start / full-end; }
 
 .about {
-  background-color: #39a6ff; }
+  background-color: #39a6ff;
+  grid-column: center-start / center-end; }
 
 .summer__gallery {
-  background-color: #347e2a; }
+  background-color: #347e2a;
+  grid-column: full-start / full-end; }
 
 .footer {
-  background-color: #244468; }
+  background-color: #244468;
+  grid-column: full-start / full-end; }
