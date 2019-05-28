@@ -1,9 +1,42 @@
+// VARIABLES 
+// COLORS
+$color-primary: #0088a9;
+$color-primary-light: #69FFF6;
+$color-primary-dark: rgba(50, 199, 216, 0.98);
+
+$color-secondary: #7dffd4bb;
+$color-secondary-dark: #244468;
+
+$color-grey-light-1:#69FFF6;
+$color-green-light-1: rgb(114, 238, 97);
+$color-green-light-2: rgb(80, 179, 67);
+
+$color-green-dark-1:rgb(52, 117, 43);
+$color-green-dark-2:rgb(38, 83, 32);
+
+$color-grey-dark: #777;
+$color-white: #edf0f1;
+$color-black: #0000;
+
+
+$navigation-height: 8rem;
+
+$color-nav-background: #24252A;
+// FONT SIZES
+$default-font-size: 1.6rem;
+
+$font-primary: 'Lato', sans-serif, arial;
+
+
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    color: inherit;
+    font-family: "Montserrat", sans-serif;
 }
 
 html{
@@ -11,26 +44,232 @@ html{
     font-size: 10px;
     font-weight: 300;
     line-height: 1.6;
-
+    
+ 
 }
 
 body {
     box-sizing: border-box;
     height: 200vh;
-}
-
-* {
-    font-size: 2rem;
+    position: relative;
     
 }
+
 // GRID
 
-.container {
-  margin-left: $navigation-width;
-  display: grid;
-  
-  grid-template-rows: 90vh repeat(6, min-content);
-  // 1 fr between the navigation and the content from both sides to center it
-  grid-template-columns: [sidenav-end full-start] minmax(4rem,1fr) [center-start] repeat(6,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
+.grid__container {
+    //   margin-left: $navigation-width;
+      display: grid;
+      margin-top: $navigation-height;
+      grid-template-rows: 90vh repeat(6, min-content);
+      // 1 fr between the navigation and the content from both sides to center it
+      grid-template-columns: [sidenav-end full-start] minmax(4rem,1fr) [center-start] repeat(6,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
+    
+    }
+    
+    
+// Header - Navigation
+.header {
+    // Positioning
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 
+    // Sizing
+    width: 100%;
+    height: $navigation-height;
+
+    // Styling
+    overflow: hidden;
+    background-color: $color-nav-background;
+    color: $color-white;
+
+    // Items Positioning
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+
+    // Links, Buttons, Header
+    li,
+    a,
+    button,
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: #edf0f1;
+        text-decoration: none;
+    }
+    // Spiros and Thomas Boats - Header
+    h1 {
+        border: 1px solid white;
+        margin: 0;
+        padding: 3px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .nav__links {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+        li a {
+            transform: all .3s ease 0s;
+            
+        }
+        li a:hover {
+            color: $color-primary;
+        }
+
+    }
+
+    // Button - Menu , Contacts
+    button {
+        padding: 9px 25px;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all .3s ease 0s;
+        &:hover{
+                background-color: rgba(0, 136, 169, 0.8);
+        }
+    }
+
+    // Menu Button 
+    .menu {
+        display: none;
+    }
+
+}
+// Hide links, show menu button
+@media screen and (max-width: 860px) {
+    .header__nav{
+        visibility: hidden;
+        display: none;
+    }
+    .cta {
+        display: none;
+    }
+    .header{
+        .menu{
+            display: inline-block;
+            visibility: visible;
+        }
+    }
+    
+}
+
+/* Mobile Nav*/
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: $color-nav-background;
+    overflow-x: hidden;
+    transition: all .5s ease 0s;
+    &__content {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    & a {
+        padding: 15px;
+        font-size: 3.5rem;
+        display: block;
+        transition: all .5s ease 0s;
+        text-decoration: none;
+        color: $color-white;
+        &:hover,
+        &:focus{
+            color: $color-primary;
+        }
+    }
+
+}
+
+
+
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.grid__header {
+
+    grid-column: full-start / full-end;
+    // clip-path: polygon(0 0, 100% 0 , 100% 75vh, 0 100% );
+    background-color: $color-white;
+
+}
+
+.heading-primary {}
+
+.heading-secondary {}
+
+
+
+
+//NAVIGATION
+
+.navigation {
+
+}
+
+// CATALOG 
+.catalog {
+    background-color:  $color-green-dark-1;
+    grid-column: center-start / center-end;
+}
+
+// Find Us
+.find-us{
+    background-color:  $color-secondary;
+    grid-column: full-start / full-end;
+}
+
+
+// About
+.about {
+    background-color:  $color-primary-dark;
+    grid-column: center-start / center-end;
+}
+
+// Summer Gallery
+.summer {
+    &__gallery {
+    background-color: $color-green-dark-2;
+    grid-column: full-start / full-end;
+    }
+}
+
+// Footer
+.footer {
+    background-color: $color-secondary-dark;
+    grid-column: full-start / full-end;
 }
