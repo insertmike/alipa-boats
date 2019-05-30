@@ -16,6 +16,7 @@ $color-green-dark-2:rgb(38, 83, 32);
 
 $color-grey-dark: #777;
 $color-white: #edf0f1;
+$color-white-2: #e0eef3;
 $color-black: #0000;
 
 
@@ -24,10 +25,11 @@ $navigation-height: 8rem;
 $color-nav-background: #24252A;
 // FONT SIZES
 $default-font-size: 1.6rem;
+$font-size-heading: 3.5rem;
 
-$font-primary: 'Lato', sans-serif, arial;
+$font-primary: "Montserrat" , "Lato", "sans-serif";
 
-
+$icon-size: 3rem;
 
 *,
 *::before,
@@ -36,34 +38,32 @@ $font-primary: 'Lato', sans-serif, arial;
     padding: 0;
     box-sizing: inherit;
     color: inherit;
-    font-family: "Montserrat", sans-serif;
+    font-family: inherit;
 }
 
 html{
-    font-family:  $font-primary;
-    font-size: 10px;
+    font-family: $font-primary;
+    font-size: 62.5%;
     font-weight: 300;
     line-height: 1.6;
-    
- 
+    scroll-behavior: smooth; 
 }
 
 body {
     box-sizing: border-box;
-    height: 200vh;
     position: relative;
-    
 }
 
 // GRID
 
 .grid__container {
-    //   margin-left: $navigation-width;
-      display: grid;
-      margin-top: $navigation-height;
-      grid-template-rows: 90vh repeat(6, min-content);
-      // 1 fr between the navigation and the content from both sides to center it
-      grid-template-columns: [sidenav-end full-start] minmax(4rem,1fr) [center-start] repeat(6,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
+    // Push on top to avoid collision with navbar 
+    margin-top: $navigation-height;
+    // Wrapper for all content
+    display: grid;
+    grid-template-rows: calc(100vh - #{$navigation-height}) repeat(6, min-content);
+    // 1 fr between the navigation and the content from both sides to center it
+    grid-template-columns: [sidenav-end full-start] minmax(4rem,1fr) [center-start] repeat(7,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
     
     }
     
@@ -98,7 +98,7 @@ body {
     h1 {
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
         color: #edf0f1;
         text-decoration: none;
     }
@@ -129,6 +129,7 @@ body {
 
     // Button - Menu , Contacts
     button {
+        // Styling
         padding: 9px 25px;
         background-color: rgba(0, 136, 169, 1);
         border: none;
@@ -167,15 +168,18 @@ body {
 /* Mobile Nav*/
 
 .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
+    // Positioning
     z-index: 1;
-    left: 0;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    // Styling
     background-color: $color-nav-background;
     overflow-x: hidden;
     transition: all .5s ease 0s;
+    // Whole viewport 
     &__content {
         display: flex;
         height: 100%;
@@ -183,6 +187,7 @@ body {
         align-items: center;
         justify-content: center;
     }
+    // Links from navigation bar
     & a {
         padding: 15px;
         font-size: 3.5rem;
@@ -197,10 +202,7 @@ body {
     }
 
 }
-
-
-
-
+// Close anchor
 .overlay .close {
     position: absolute;
     top: 20px;
@@ -220,17 +222,162 @@ body {
     }
 }
 
+// Landing page
 .grid__header {
-
+    // Position on global grid
     grid-column: full-start / full-end;
-    // clip-path: polygon(0 0, 100% 0 , 100% 75vh, 0 100% );
+    // Grid for this block
+    display: grid;
+    grid-template-columns: [sidespace-end full-start] minmax(3rem,1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem,1fr) [full-end];
+    grid-template-rows: minmax(3rem,1fr) repeat(5, minmax(min-content, 1fr)) minmax(3rem,1fr);
+    // Styling
     background-color: $color-white;
+    
+   
+    // Services
+    &__box {
+        // Position on parent grid
+        grid-column: 3 / 9 !important;
+        grid-row: 2 / 7 !important;
+       
+        
+        // Style
+        border: 1px solid $color-primary-dark;
+        background-color: rgba(0, 136, 169, 0.8);
+        box-shadow: .3rem .7rem 3rem rgba($color-black, .4);
+        border-radius: .5rem;
 
+        // Flex for this block
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        
+    }
+
+    // Images on top of the parent container
+    &__imgbox{
+        
+            
+        &--1{
+            // Position on parent grid
+            grid-column: 8 / 10;
+            grid-row: 3 / 5;
+            right: -5%;
+            bottom: -10%;
+            position: relative;
+        }
+    
+
+        &--2{
+             // Position on parent grid
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;
+            position: relative;
+            top: -30%;
+        }
+        
+       
+       
+        img{
+            // Size
+            width: 25vw;//42rem;
+
+            // Styling
+            border-radius: 1rem;
+            border: 1px solid $color-primary-dark;
+            background-color: rgba(0, 136, 169, 1);
+            box-shadow: .3rem .7rem 3rem rgba($color-black, .4); 
+        }
+        
+    }
+    
+    // Scroll arrow
+    &__arrow-down{
+         // Position on parent grid
+        grid-column: 5 / 7;
+        grid-row: 7 / -1;
+
+        // Positioning items within the div - Flex
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -20%;
+        justify-content: center;
+
+        // Sizes
+        font-size: 15rem;
+        line-height: 0;
+        overflow: hidden;
+        
+        // Styling       
+        color: rgba($color-primary, .8);
+    }
 }
 
-.heading-primary {}
+.heading-primary {
+   
+}
 
-.heading-secondary {}
+.heading__secondary {
+    // Sizing
+    font-weight: 300;
+    font-size: $font-size-heading;
+
+    // Styling
+    color: $color-white;
+    text-transform: uppercase; 
+    border-bottom: .2rem solid $color-white-2;
+    border-style: ridge;
+    border-width: 0px 0px .2rem 0px;
+   
+
+
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    // Flex for current block
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+// Icons
+.icon{
+    // Positioning && Sizing
+    position: relative;
+    text-align: center;
+    line-height: 0;
+    font-size: 0;
+
+    // Sizes
+    width: $icon-size;
+    height: $icon-size; 
+
+    // Styling
+    display: inline-block;
+    fill: $color-white-2;
+ 
+    // Speed boat icon
+    &__speed{
+        width: calc(1.5 * #{$icon-size});
+        height: calc(1.5 * #{$icon-size});
+    }
+    // Specular views icons
+    &__view{
+        position: relative;
+        
+        width: calc(2 * #{$icon-size});
+        height: calc(2 * #{$icon-size});
+        
+    }
+    // Unforgettable experience icon
+    &__heart{
+     
+    }
+}
 
 
 
