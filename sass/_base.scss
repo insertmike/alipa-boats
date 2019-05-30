@@ -15,6 +15,8 @@ $color-green-dark-1:rgb(52, 117, 43);
 $color-green-dark-2:rgb(38, 83, 32);
 
 $color-grey-dark: #777;
+$color-grey-dark-1: #54483A;
+
 $color-white: #edf0f1;
 $color-white-2: #e0eef3;
 $color-black: #0000;
@@ -26,11 +28,16 @@ $color-nav-background: #24252A;
 // FONT SIZES
 $default-font-size: 1.6rem;
 $font-size-heading: 3.5rem;
-
+$font-size-heading-sub: 2.5rem;
 $font-primary: "Montserrat" , "Lato", "sans-serif";
 
 $icon-size: 3rem;
-
+#goto__about{
+  position: relative;
+  margin-top: calc(-1 * #{$navigation-height});   /* Size of fixed header */
+  padding-bottom: 300px; 
+  display: block; 
+}
 
 *,
 *::before,
@@ -39,7 +46,7 @@ $icon-size: 3rem;
     padding: 0;
     box-sizing: inherit;
     color: inherit;
-    font-family: inherit;
+    // font-family: inherit;
 }
 
 html{
@@ -55,6 +62,14 @@ body {
     position: relative;
 }
 
+// Typography
+
+.heading__tertiary {
+    font-size: 3rem;
+    font-weight: 400;
+    color: $font-size-heading-sub;
+    
+}
 // GRID
 
 .grid__container {
@@ -64,7 +79,7 @@ body {
     display: grid;
     grid-template-rows: calc(100vh - #{$navigation-height}) repeat(6, min-content);
     // 1 fr between the navigation and the content from both sides to center it
-    grid-template-columns: [sidenav-end full-start] minmax(4rem,1fr) [center-start] repeat(7,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
+    grid-template-columns: [sidenav-end full-start] minmax(4rem,1fr) [center-start] repeat(9,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem,1fr) [full-end];
     
     }
     
@@ -318,11 +333,11 @@ body {
 
             transition: all .25s;
 
-            @media only screen and (max-width: 1000px) {
-               display: none;
-               }
+            
         }
-        
+        @media only screen and (max-width: 1000px) {
+            display: none;
+            }
     }
     
     // Scroll arrow
@@ -447,6 +462,47 @@ body {
     }
 }
 
+// About
+.about {
+    // Development purposes
+    // height: calc(100vh - #{$navigation-height});
+    // height: 50rem;
+    
+    // -----------
+    grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    // 
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    align-items: start;
+
+    &__feature {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-row-gap: 1rem;
+        grid-column-gap: 2.5rem;
+        
+        .feature__text {
+            font-size: 1.7rem;
+        }
+        &__icon {
+            fill: $color-primary;
+            width: 5.5rem;
+            height: 5.5rem;
+            line-height: 0;
+            // width: 5rem;
+            // height: 4.5rem;
+            grid-row: 1 / span 2;
+
+            transform: translateY(-1rem);
+        }
+    }
+
+}
 
 
 
@@ -455,6 +511,8 @@ body {
 .navigation {
 
 }
+
+
 
 // CATALOG 
 .catalog {
@@ -469,11 +527,6 @@ body {
 }
 
 
-// About
-.about {
-    background-color:  $color-primary-dark;
-    grid-column: center-start / center-end;
-}
 
 // Summer Gallery
 .summer {
