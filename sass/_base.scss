@@ -35,8 +35,6 @@ $icon-size: 3rem;
 #goto__about{
   position: relative;
   margin-top: calc(-1 * #{$navigation-height});   /* Size of fixed header */
-  padding-bottom: 300px; 
-  display: block; 
 }
 
 *,
@@ -504,8 +502,33 @@ body {
 
 }
 
+// CATALOG 
+.catalog {
+    background-color:  $color-green-dark-1;
+    grid-column: full-start / full-end;
+    padding: 15rem 8rem;
+    
+    background-color: $color-white;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
 
+    
+    
+}
+.boat{
+    background-color: #fff;
 
+    &__img {
+        width: 100%;
+        
+    }
+    svg {
+        width: 3rem;
+        height: 3rem;
+    }
+}
 //NAVIGATION
 
 .navigation {
@@ -514,11 +537,7 @@ body {
 
 
 
-// CATALOG 
-.catalog {
-    background-color:  $color-green-dark-1;
-    grid-column: center-start / center-end;
-}
+
 
 // Find Us
 .find-us{
