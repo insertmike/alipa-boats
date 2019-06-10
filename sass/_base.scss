@@ -37,6 +37,15 @@ $icon-size: 3rem;
   margin-top: calc(-1 * #{$navigation-height});   /* Size of fixed header */
 }
 
+.form-group-radio{
+    display: flex;
+    justify-content: center;
+}
+.form-check{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 *,
 *::before,
@@ -80,6 +89,15 @@ body {
         background-color: $color-primary;
         
     }
+    &__submit{
+        display: table;
+        margin: 0 auto;
+        min-width: 15rem;
+    }
+}
+
+.modal-title{
+    width: 100%;
 }
 // Typography
 
@@ -375,7 +393,7 @@ body {
         // Sizes
         font-size: 15rem;
         line-height: 0;
-        overflow: hidden;
+        
         
         // Styling       
         color: rgba($color-primary, .8);
@@ -385,6 +403,8 @@ body {
         &:hover{
             
             transform: scale(1.05) translateY(10%);
+            color: rgba($color-primary, .8);;
+            text-decoration: none;
            
         }
     }
@@ -528,7 +548,7 @@ body {
     background-color: $color-white;
     grid-column: full-start / full-end;
     
-    padding: 5rem 8rem;
+    margin: 5rem 4rem;
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -647,6 +667,7 @@ body {
     margin: 0 7rem;
     grid-column: full-start / full-end;
     display: flex;
+    flex-wrap: wrap;
     height: 80vh;
 
     iframe{
@@ -659,9 +680,10 @@ body {
     }
     @media only screen and (max-width: 85rem) {
         padding: 2rem 0;
+        margin: 0 4rem;
         justify-content: center;
         iframe{
-            width: 80%;
+            width: 100%;
             height: 50%;
         }
         height: 100vh;;
@@ -669,8 +691,9 @@ body {
     @media only screen and (max-width: 45rem) {
         padding: 0rem 0;
         justify-content: center;
+        margin: 0 2rem;
         iframe{
-            width: 80%;
+            width: 100%;
             height: 50%;
         }
         height: 100vh;;

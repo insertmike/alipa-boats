@@ -8,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- ADD FAVICON -->
@@ -118,7 +119,6 @@
 
 
     <section class="boats">
-
       <div class="boat">
         <div class="boat__img">
 
@@ -535,145 +535,118 @@
     </footer>
   </div>
 
-  <!-- <header class="header">
-        <svg class="header__logo-box">
-           <use xlink:href="img/symbol-defs.svg#icon-compass2"></use>
-        </svg>
-        <div class="header__text-box">
-            <h1 class="heading-primary">
-                <span class="heading-primary--main">Acapulco Boats</span>
-                <span class="heading-primary--sub">the unforgettable experience</span>
-            </h1>
-            <div class="nav">
-                <a href="" class="btn btn--white btn--animated">About us</a>
-                <a href="" class="btn btn--white btn--animated">Boat Catalogue</a>
-                <a href="" class="btn btn--white btn--animated">Feedback</a>
-            </div>
-          
-        </div>
-    </header>
-    <main>
-            <section class="section-gallery">
-                <div class="boat">Boat Card 1</div>
-                <div class="boat">Boat Card 2</div>
-                <div class="boat">Boat Card 3</div>
-                <div class="boat">Boat Card 4</div>
-                <div class="boat">Boat Card 5</div>
-                <div class="boat">Boat Card 6</div>
-                <div class="boat">Boat Card 7</div>
-                <div class="boat">Boat Card 8</div>
-                <div class="boat">Boat Card 9</div>
-                <div class="boat">Boat Card 10</div>
-                <div class="boat">Boat Card 11</div>
-                <div class="boat">Boat Card 12</div>
-            </section>
-    </main>
-     -->
-  <!-- Button trigger modal -->
-
   <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Boat Booking Form</h5>
+          <h5 class="modal-title text-center" id="exampleModalLongTitle">Boat Booking Form</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <form action="mail.php" method="POST">
-            <div class="form-row">
-              <div class="col-md-6 mb-3">
-                <label for="validationDefault01">Name*</label>
-                <input name="customerName"type="text" class="form-control input-lg" id="validationDefault01" placeholder="First name"
-                  required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="validationDefault02">Hotel</label>
-                <input name="customerHotel"type="text" class="form-control" id="validationDefault02" placeholder="Hotel name">
-              </div>
 
+  
+          <form action="https://formspree.io/alipaboats@gmail.com" method="POST" />
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputName">Name *</label>
+              <input type="text" class="form-control" id="inputName" name="Name" placeholder="Your name" required>
             </div>
-            <div class="form-row">
-              <div class="col-md-5 mb-3">
-                <label for="validationCustom08">Mobile*</label>
-                <input name="customerMobile"type="tel" class="form-control" id="validationCustom08" placeholder="Mobile number" required>
-
-              </div>
-              <div class="col-md-7 mb-3"
-                style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                    value="option1">
-                  <label class="form-check-label" for="inlineRadio1">1 Person</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                    value="option2">
-                  <label class="form-check-label" for="inlineRadio2">2 Persons</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                    value="option2">
-                  <label class="form-check-label" for="inlineRadio2">3 Persons</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                    value="option2">
-                  <label class="form-check-label" for="inlineRadio2">4 Persons</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                    value="option2">
-                  <label class="form-check-label" for="inlineRadio2">5 Persons</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                    value="option2">
-                  <label class="form-check-label" for="inlineRadio2">6 Persons</label>
-                </div>
-
-              </div>
-              <div class="form-row col-md-12 mb-3 text-center
-              ">
-                <label>Duration</label>
-                <select name="customerDuration" class="browser-default custom-select mb-4">
-                  <option value="" disabled>Choose option</option>
-                  <option value="1" selected>Full day</option>
-                  <option value="2">Half day - Morning -> Afternoon</option>
-                  <option value="3">Half day - Afternoon -> Morning</option>
-                  <option value="4">One hour</option>
-                </select>
-              </div>
+            <div class="form-group col-md-6">
+                <label class="control-label" for="date">Booking Date *</label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" required/>
             </div>
-
-        </div>
-
-
-        <div class="form-group">
-          <div class="form-check">
-            <label class="form-check-label" for="info" style="text-align: center; width: 100%;">
-              You will be contacted within a few hours
-            </label>
+            
           </div>
+          <div class="form-group">
+            <label for="inputAddress2">Mobile Number *</label>
+            <input type="number" class="form-control" pattern=".{7,16}"
+              placeholder="Including your country prefix code." name="mobile" required>
+          </div>
+          <div class="form-group form-group-radio">
+            <!-- radio buttons start-->
+            <div class="form-check form-check-radio form-check-inline" ">
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                  value="option2">
+                <label class="form-check-label" for="inlineRadio2" name="numPeople">1 Person</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
+                  value="option2">
+                <label class="form-check-label" for="inlineRadio2">2 Persons</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
+                  value="option2">
+                <label class="form-check-label" for="inlineRadio2">3 Persons</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
+                  value="option2">
+                <label class="form-check-label" for="inlineRadio2">4 Persons</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
+                  value="option2">
+                <label class="form-check-label" for="inlineRadio2">5 Persons</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
+                  value="option2">
+                <label class="form-check-label" for="inlineRadio2">6 Persons</label>
+              </div>
+            </div>
+            <!-- radio buttons end-->
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-7">
+              <label>Duration</label>
+              <select name="customerDuration" class="browser-default custom-select mb-4">
+                <option value="" disabled>Choose option</option>
+                <option value="1" selected>Full day</option>
+                <option value="2">Half day - 9:30am -> 1pm</option>
+                <option value="3">Half day - 1:30pm -> 5:30pm</option>
+                <option value="4">One hour</option>
+              </select>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="inputAddress">Address</label>
+                <input type="password" class="form-control" id="inputAddress" name="Address" placeholder="Your hotel">
+              </div>
+           
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="whatsapp-contact" name="whatsapp">
+              <label class="form-check-label" for="whatsapp-contact">
+                Contact me on <i>Viber</i> or <i>WhatsApp</i> instead
+              </label>
+            </div>
+          </div>
+       
+       
+
         </div>
-        <button class="btn btn-primary" type="submit">Submit Book Request</button>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button> -->
+        <div class="modal-footer">
+            <button class="btn btn__submit btn-form" type="submit">Book me</button>
+        </div>
+      </form>
       </div>
     </div>
-  </div>
   </div>
 
   <script src="index.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
+  <!-- Bootstrap Date-Picker Plugin -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
