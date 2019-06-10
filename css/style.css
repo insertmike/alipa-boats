@@ -34,8 +34,7 @@ body {
   cursor: pointer;
   transition: all .2s; }
   .btn:hover, .btn:active {
-    color: #69FFF6;
-    transform: scale(1.02); }
+    background-color: #0088a9; }
 
 .heading__tertiary {
   font-size: 3rem;
@@ -295,10 +294,7 @@ body {
   grid-gap: 7rem; }
   @media only screen and (max-width: 60rem) {
     .boats {
-      margin: 5rem 4rem; } }
-  @media only screen and (max-width: 60rem) {
-    .boats {
-      margin: 5rem 2rem; } }
+      margin: 5rem 3rem; } }
 
 .boat {
   background-color: #fff;
@@ -306,7 +302,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3rem;
-  min-width: 28rem;
   box-shadow: 0.3rem 0.7rem 3rem rgba(0, 0, 0, 0.4); }
   .boat__img {
     display: grid;
@@ -356,12 +351,35 @@ body {
     grid-column: 1 / -1; }
 
 .find-us {
-  margin: 6rem 0;
-  grid-column: center-start / center-end;
-  width: 40% !important; }
+  padding: 6rem 0;
+  margin: 0 7rem;
+  grid-column: full-start / full-end;
+  display: flex;
+  height: 80vh; }
+  .find-us iframe {
+    width: 45%; }
+  .find-us__photo {
+    width: 50%;
+    margin-left: 5%; }
+  @media only screen and (max-width: 85rem) {
+    .find-us {
+      padding: 2rem 0;
+      justify-content: center;
+      height: 100vh; }
+      .find-us iframe {
+        width: 80%;
+        height: 50%; } }
+  @media only screen and (max-width: 45rem) {
+    .find-us {
+      padding: 0rem 0;
+      justify-content: center;
+      height: 100vh; }
+      .find-us iframe {
+        width: 80%;
+        height: 50%; } }
 
 .summer__gallery {
-  background-color: #265320;
+  background-color: #edf0f1;
   grid-column: full-start / full-end; }
 
 .footer {
@@ -370,7 +388,7 @@ body {
   color: #edf0f1;
   font-size: 1.5rem;
   text-align: center;
-  padding: 2.5rem; }
+  padding: 1.5rem; }
   .footer a,
   .footer a:link {
     color: #edf0f1;
@@ -382,6 +400,6 @@ body {
     transform: scale(1.1);
     box-shadow: 0.3rem 0.7rem 3rem rgba(0, 0, 0, 0.4);
     background-color: #edf0f1;
-    padding: 1rem 1rem;
+    padding: .2rem .2rem;
     border-radius: 1rem;
     color: #0088a9; }

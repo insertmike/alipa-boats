@@ -76,8 +76,8 @@ body {
 
     &:hover,
     &:active{
-        color: $color-primary-light;
-        transform:  scale(1.020);
+        background-color: $color-primary;
+        
     }
 }
 // Typography
@@ -532,11 +532,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 7rem;
-    @media only screen and (max-width: 60rem) {
-        margin: 5rem 4rem;
-      }
       @media only screen and (max-width: 60rem) {
-        margin: 5rem 2rem;
+        margin: 5rem 3rem;
       }
 
 }
@@ -547,7 +544,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 3rem;
-    min-width: 28rem;
+    // min-width: 28rem;
     box-shadow: .3rem .7rem 3rem rgba($color-black, .4);
 
     &__img{
@@ -645,9 +642,40 @@ body {
 // Find Us
 .find-us{
     // background-color:  #FFF;
-    margin: 6rem 0;
-    grid-column: center-start / center-end;
-    width: 40% !important;
+    padding: 6rem 0;
+    margin: 0 7rem;
+    grid-column: full-start / full-end;
+    display: flex;
+    height: 80vh;
+
+    iframe{
+        width: 45%;
+        
+    }
+    &__photo{
+        width: 50%;
+        margin-left: 5%;
+    }
+    @media only screen and (max-width: 85rem) {
+        padding: 2rem 0;
+        justify-content: center;
+        iframe{
+            width: 80%;
+            height: 50%;
+        }
+        height: 100vh;;
+    }
+    @media only screen and (max-width: 45rem) {
+        padding: 0rem 0;
+        justify-content: center;
+        iframe{
+            width: 80%;
+            height: 50%;
+        }
+        height: 100vh;;
+    }
+    
+    
 }
 
 
@@ -655,8 +683,8 @@ body {
 // Summer Gallery
 .summer {
     &__gallery {
-    background-color: $color-green-dark-2;
-    grid-column: full-start / full-end;
+        background-color: $color-white;
+        grid-column: full-start / full-end;
     }
 }
 
@@ -667,7 +695,7 @@ body {
     color: $color-white;
     font-size: 1.5rem;
     text-align: center;
-    padding: 2.5rem;
+    padding: 1.5rem;
    
    
 
@@ -683,8 +711,8 @@ body {
     a:hover{
         transform: scale(1.1);
         box-shadow: .3rem .7rem 3rem rgba($color-black, .4);
-        background-color: $color-white;
-        padding: 1rem 1rem;
+        background-color: $color-white;;
+        padding: .2rem .2rem;
         border-radius: 1rem;
         color: $color-primary;
     }
