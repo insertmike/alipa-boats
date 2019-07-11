@@ -8,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
   <link rel="stylesheet" href="css/style.css" />
 
@@ -26,24 +27,24 @@
     <h1>Spiros & Thomas Boats</h1>
     <nav class="header__nav">
       <ul class="nav__links">
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Boat Catalog</a></li>
-        <li><a href="#">Find us</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#goto_about">Services</a></li>
+        <li><a href="#goto_catalogue">Boat Catalog</a></li>
+        <li><a href="#goto_find-us">Find us</a></li>
+        <li><a href="#goto_gallery">Gallery</a></li>
       </ul>
     </nav>
 
-    <a href="#" class="cta"><button>Contact</button></a>
+    <a href="#" class="cta"><button onclick="window.open('tel:900300400')">Call Us</button></a>
     <a onclick="openNav()" class="menu"><button>Menu</button></a>
   </header>
 
   <div id="mobile__menu" class="overlay">
     <a onclick="closeNav()" href="#" class="close">&times;</a>
     <div class="overlay__content">
-      <a href="#">Services</a>
-      <a href="#">Boat Catalog</a>
-      <a href="#">Find us</a>
-      <a href="#">About</a>
+      <a href="#goto_about">Services</a>
+      <a href="#goto_catalogue">Boat Catalog</a>
+      <a href="#goto_find-us">Find us</a>
+      <a href="#goto-gallery">Gallery</a>
     </div>
   </div>
 
@@ -80,10 +81,10 @@
         <img src="img/boat_cave.jpg" alt="Cave picture from a boat">
       </div>
 
-      <a href="#goto__about" class="grid__header__arrow-down">&darr;</a>
+      <a href="#goto_about" class="grid__header__arrow-down">&darr;</a>
 
     </div>
-    <span id="goto__about"> &nbsp; </span>
+    <span id="goto_about"> &nbsp; </span>
     <section class="about" id="about">
       <div class="about__feature">
         <svg class="about__feature__icon">
@@ -101,7 +102,7 @@
         </svg>
         <h3 class="heading__tertiary">Go on tour</h3>
         <p class="feature__text">Paleokastritsa is famous for its breathtaking beauty and magnificent scenery.<span
-            id="goto__about"></span>A boat trip will enable you to experience the many amazing locations that this area
+            id="goto_about"></span>A boat trip will enable you to experience the many amazing locations that this area
           has to offer!</p>
 
       </div>
@@ -111,410 +112,372 @@
           <use xlink:href="img/sprite2.svg#icon-compass"></use>
         </svg>
         <h3 class="heading__tertiary">Explore the area</h3>
-        <p class="feature__text">Established in 1984 this family run fleet were the first to set sail in Paleokastritsa.
+        <p  class="feature__text">Established in 1984 this family run fleet were the first to set sail in Paleokastritsa.
           We have been collecting experience for many years to make your day with us wonderful.</p>
       </div>
 
     </section>
 
+  
 
-    <section class="boats">
+    <section  id="goto_catalogue" class="boats">
+      <!-- -------------- 15 HP------------------->
       <div class="boat">
         <div class="boat__img">
 
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
+          <a data-fancybox="gallery-32" href="img/reg32/reg32_1.jpg"><img src="img/reg32/reg32_1-min.jpg"></a>
+          <a data-fancybox="gallery-32" href="img/reg32/reg32_2.jpg"><img src="img/reg32/reg32_2-min.jpg"></a>
+          <a data-fancybox="gallery-32" href="img/reg32/reg32_3.jpg"><img src="img/reg32/reg32_3-min.jpg"></a>
+          <a data-fancybox="gallery-32" href="img/reg32/reg32_4.jpg"><img src="img/reg32/reg32_4-min.jpg"></a>
         </div>
 
         <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
         <div class="boat__capacity">
           <svg class="about__feature__icon">
             <use xlink:href="img/sprite4.svg#icon-people"></use>
           </svg>
-          <p>5 people</p>
+          <span class="about__feature__description">3-4 people</s>
         </div>
+
         <div class="boat__starter">
           <svg class="about__feature__icon">
             <use xlink:href="img/sprite4.svg#icon-switch"></use>
           </svg>
-          <p>Electric starter</p>
+          <span class="about__feature__description">Manual</span>
         </div>
         <div class="boat__rating">
           <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
+            <use xlink:href="img/sprite6.svg#icon-badge"></use>
           </svg>
-          <p>5 / 10</p>
+          <span class="about__feature__description">Spiros 32</span>
+        </div>
+        <div class="boat__price">
+          <svg class="about__feature__icon">
+            <use xlink:href="img/sprite5.svg#icon-eur"></use>
+          </svg>
+          <span class="about__feature__description">60</span>
         </div>
         <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
+          data-target="#bookModalCenter">Book me</button>
+      </div>
+      <!-- -------------- 20 HP----------------- -->
+      <div class="boat">
+          <div class="boat__img">
+  
+            <a data-fancybox="gallery-68" href="img/reg68/reg68_4.jpg"><img src="img/reg68/reg68_4.jpg"></a>
+            <a data-fancybox="gallery-68" href="img/reg68/reg68_2.jpg"><img src="img/reg68/reg68_2.jpg"></a>
+            <a data-fancybox="gallery-68" href="img/reg68/reg68_3.jpg"><img src="img/reg68/reg68_3.jpg"></a>
+            <a data-fancybox="gallery-68" href="img/reg68/reg68_1.jpg"><img src="img/reg68/reg68_1.jpg"></a>
+          </div>
+  
+          <h4 class="boat__engine"> 20 Horse Power </h4>
+          <div class="boat__capacity">
+            <svg class="about__feature__icon">
+              <use xlink:href="img/sprite4.svg#icon-people"></use>
+            </svg>
+            <span class="about__feature__description">3-5 people</s>
+          </div>
+  
+          <div class="boat__starter">
+            <svg class="about__feature__icon">
+              <use xlink:href="img/sprite4.svg#icon-switch"></use>
+            </svg>
+            <span class="about__feature__description">Electric</span>
+          </div>
+          <div class="boat__rating">
+            <svg class="about__feature__icon">
+              <use xlink:href="img/sprite6.svg#icon-badge"></use>
+            </svg>
+            <span class="about__feature__description">Spiros 68</span>
+          </div>
+          <div class="boat__price">
+            <svg class="about__feature__icon">
+              <use xlink:href="img/sprite5.svg#icon-eur"></use>
+            </svg>
+            <span class="about__feature__description">60-70</span>
+          </div>
+          <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
+            data-target="#bookModalCenter">Book me</button>
+        </div>
+  <!-- -------------- 20 HP----------------- -->
+  <div class="boat">
+      <div class="boat__img">
+
+        <a data-fancybox="gallery-1163" href="img/reg68/reg68_4.jpg"><img src="img/reg68/reg68_4.jpg"></a>
+        <a data-fancybox="gallery-1163" href="img/reg68/reg68_2.jpg"><img src="img/reg68/reg68_2.jpg"></a>
+        <a data-fancybox="gallery-1163" href="img/reg68/reg68_3.jpg"><img src="img/reg68/reg68_3.jpg"></a>
+        <a data-fancybox="gallery-1163" href="img/reg68/reg68_1.jpg"><img src="img/reg68/reg68_1.jpg"></a>
       </div>
 
+      <h4 class="boat__engine"> 20 Horse Power </h4>
+      <div class="boat__capacity">
+        <svg class="about__feature__icon">
+          <use xlink:href="img/sprite4.svg#icon-people"></use>
+        </svg>
+        <span class="about__feature__description">3-5 people</s>
+      </div>
 
-      <div class="boat">
+      <div class="boat__starter">
+        <svg class="about__feature__icon">
+          <use xlink:href="img/sprite4.svg#icon-switch"></use>
+        </svg>
+        <span class="about__feature__description">Electric</span>
+      </div>
+      <div class="boat__rating">
+        <svg class="about__feature__icon">
+          <use xlink:href="img/sprite6.svg#icon-badge"></use>
+        </svg>
+        <span class="about__feature__description">Eleana 1163</span>
+      </div>
+      <div class="boat__price">
+        <svg class="about__feature__icon">
+          <use xlink:href="img/sprite5.svg#icon-eur"></use>
+        </svg>
+        <span class="about__feature__description">70-75</span>
+      </div>
+      <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
+        data-target="#bookModalCenter">Book me</button>
+    </div>
+  <!-- -------------- 25 HP----------------- -->
+    <div class="boat">
         <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
+  
+          <a data-fancybox="gallery-985" href="img/reg985/reg985-1.jpg"><img src="img/reg985/reg985-1.jpg"></a>
+          <a data-fancybox="gallery-985" href="img/reg985/reg985-2.jpg"><img src="img/reg985/reg985-2.jpg"></a>
+          <a data-fancybox="gallery-985" href="img/reg985/reg985-3.jpg"><img src="img/reg985/reg985-2.jpg"></a>
+          <a data-fancybox="gallery-985" href="img/reg985/reg985-4.jpg"><img src="img/reg985/reg985-4.jpg"></a>
         </div>
-
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
+  
+        <h4 class="boat__engine"> 25 Horse Power </h4>
         <div class="boat__capacity">
           <svg class="about__feature__icon">
             <use xlink:href="img/sprite4.svg#icon-people"></use>
           </svg>
-          <p>5 people</p>
+          <span class="about__feature__description">3-5 people</s>
         </div>
+  
         <div class="boat__starter">
           <svg class="about__feature__icon">
             <use xlink:href="img/sprite4.svg#icon-switch"></use>
           </svg>
-          <p>Electric starter</p>
+          <span class="about__feature__description">Electric</span>
         </div>
         <div class="boat__rating">
           <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
+            <use xlink:href="img/sprite6.svg#icon-badge"></use>
           </svg>
-          <p>5 / 10</p>
+          <span class="about__feature__description">Spiros 985</span>
+        </div>
+        <div class="boat__price">
+          <svg class="about__feature__icon">
+            <use xlink:href="img/sprite5.svg#icon-eur"></use>
+          </svg>
+          <span class="about__feature__description">70-80</span>
         </div>
         <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
+          data-target="#bookModalCenter">Book me</button>
       </div>
-
-
-      <div class="boat">
+    <!-- 30 HP -->
+    <div class="boat">
         <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
+  
+          <a data-fancybox="gallery-985" href="img/reg983/reg983-1.jpg"><img src="img/reg983/reg983-1.jpg"></a>
+          <a data-fancybox="gallery-985" href="img/reg983/reg983-2.jpg"><img src="img/reg983/reg983-2.jpg"></a>
+          <a data-fancybox="gallery-985" href="img/reg983/reg983-3.jpg"><img src="img/reg983/reg983-2.jpg"></a>
+          <a data-fancybox="gallery-985" href="img/reg983/reg983-4.jpg"><img src="img/reg983/reg983-4.jpg"></a>
         </div>
-
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
+  
+        <h4 class="boat__engine"> 30 Horse Power </h4>
         <div class="boat__capacity">
           <svg class="about__feature__icon">
             <use xlink:href="img/sprite4.svg#icon-people"></use>
           </svg>
-          <p>5 people</p>
+          <span class="about__feature__description">3-6 people</s>
         </div>
+  
         <div class="boat__starter">
           <svg class="about__feature__icon">
             <use xlink:href="img/sprite4.svg#icon-switch"></use>
           </svg>
-          <p>Electric starter</p>
+          <span class="about__feature__description">Electric</span>
         </div>
         <div class="boat__rating">
           <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
+            <use xlink:href="img/sprite6.svg#icon-badge"></use>
           </svg>
-          <p>5 / 10</p>
+          <span class="about__feature__description">Spiros 983</span>
+        </div>
+        <div class="boat__price">
+          <svg class="about__feature__icon">
+            <use xlink:href="img/sprite5.svg#icon-eur"></use>
+          </svg>
+          <span class="about__feature__description">80-100</span>
         </div>
         <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
+          data-target="#bookModalCenter">Book me</button>
+      </div>
+   <!-- 30 HP -->
+   <div class="boat">
+      <div class="boat__img">
+
+        <a data-fancybox="gallery-1161" href="img/reg1161/reg1161-4.jpg"><img src="img/reg1161/reg1161-4.jpg"></a>
+        <a data-fancybox="gallery-1161" href="img/reg1161/reg1161-3.jpg"><img src="img/reg1161/reg1161-3.jpg"></a>
+        <a data-fancybox="gallery-1161" href="img/reg1161/reg1161-4.jpg"><img src="img/reg1161/reg1161-4.jpg"></a>
+        <a data-fancybox="gallery-1161" href="img/reg1161/reg1161-1.jpg"><img src="img/reg1161/reg1161-1.jpg"></a>
       </div>
 
+      <h4 class="boat__engine"> 30 Horse Power </h4>
+      <div class="boat__capacity">
+        <svg class="about__feature__icon">
+          <use xlink:href="img/sprite4.svg#icon-people"></use>
+        </svg>
+        <span class="about__feature__description">3-6 people</s>
+      </div>
 
-      <div class="boat">
+      <div class="boat__starter">
+        <svg class="about__feature__icon">
+          <use xlink:href="img/sprite4.svg#icon-switch"></use>
+        </svg>
+        <span class="about__feature__description">Electric</span>
+      </div>
+      <div class="boat__rating">
+        <svg class="about__feature__icon">
+          <use xlink:href="img/sprite6.svg#icon-badge"></use>
+        </svg>
+        <span class="about__feature__description">Georgia 1161</span>
+      </div>
+      <div class="boat__price">
+        <svg class="about__feature__icon">
+          <use xlink:href="img/sprite5.svg#icon-eur"></use>
+        </svg>
+        <span class="about__feature__description">100-130</span>
+      </div>
+      <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
+        data-target="#bookModalCenter">Book me</button>
+    </div>
+
+    <div class="boat">
         <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
+  
+          <a data-fancybox="gallery-1162" href="img/reg1162/reg1162-1.jpg"><img src="img/reg1162/reg1162-1.jpg"></a>
+          <a data-fancybox="gallery-1162" href="img/reg1162/reg1162-4.jpg"><img src="img/reg1162/reg1162-4.jpg"></a>
+          <a data-fancybox="gallery-1162" href="img/reg1162/reg1162-3.jpg"><img src="img/reg1162/reg1162-3.jpg"></a>
+          <a data-fancybox="gallery-1162" href="img/reg1162/reg1162-2.jpg"><img src="img/reg1162/reg1162-2.jpg"></a>
         </div>
-
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
+  
+        <h4 class="boat__engine"> 30 Horse Power </h4>
         <div class="boat__capacity">
           <svg class="about__feature__icon">
             <use xlink:href="img/sprite4.svg#icon-people"></use>
           </svg>
-          <p>5 people</p>
+          <span class="about__feature__description">3-6 people</s>
         </div>
+  
         <div class="boat__starter">
           <svg class="about__feature__icon">
             <use xlink:href="img/sprite4.svg#icon-switch"></use>
           </svg>
-          <p>Electric starter</p>
+          <span class="about__feature__description">Electric</span>
         </div>
         <div class="boat__rating">
           <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
+            <use xlink:href="img/sprite6.svg#icon-badge"></use>
           </svg>
-          <p>5 / 10</p>
+          <span class="about__feature__description">Katerina 1162</span>
+        </div>
+        <div class="boat__price">
+          <svg class="about__feature__icon">
+            <use xlink:href="img/sprite5.svg#icon-eur"></use>
+          </svg>
+          <span class="about__feature__description">100-130</span>
         </div>
         <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
+          data-target="#bookModalCenter">Book me</button>
       </div>
-
 
       <div class="boat">
-        <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
+          <div class="boat__img">
+    
+            <a data-fancybox="gallery-1888" href="img/reg1888/reg1888-1.jpg"><img src="img/reg1888/reg1888-1.jpg"></a>
+            <a data-fancybox="gallery-1888" href="img/reg1888/reg1888-4.jpg"><img src="img/reg1888/reg1888-4.jpg"></a>
+            <a data-fancybox="gallery-1888" href="img/reg1888/reg1888-3.jpg"><img src="img/reg1888/reg1888-3.jpg"></a>
+            <a data-fancybox="gallery-1888" href="img/reg1888/reg1888-2.jpg"><img src="img/reg1888/reg1888-2.jpg"></a>
+          </div>
+    
+          <h4 class="boat__engine"> 50 Horse Power </h4>
+          <div class="boat__capacity">
+            <svg class="about__feature__icon">
+              <use xlink:href="img/sprite4.svg#icon-people"></use>
+            </svg>
+            <span class="about__feature__description">3-6 people</s>
+          </div>
+    
+          <div class="boat__starter">
+            <svg class="about__feature__icon">
+              <use xlink:href="img/sprite4.svg#icon-switch"></use>
+            </svg>
+            <span class="about__feature__description">Electric</span>
+          </div>
+          <div class="boat__rating">
+            <svg class="about__feature__icon">
+              <use xlink:href="img/sprite6.svg#icon-badge"></use>
+            </svg>
+            <span class="about__feature__description">Thomas 1888</span>
+          </div>
+          <div class="boat__price">
+            <svg class="about__feature__icon">
+              <use xlink:href="img/sprite5.svg#icon-eur"></use>
+            </svg>
+            <span class="about__feature__description">130-150</span>
+          </div>
+          <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
+            data-target="#bookModalCenter">Book me</button>
         </div>
 
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
-        <div class="boat__capacity">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-people"></use>
-          </svg>
-          <p>5 people</p>
-        </div>
-        <div class="boat__starter">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-switch"></use>
-          </svg>
-          <p>Electric starter</p>
-        </div>
-        <div class="boat__rating">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
-          </svg>
-          <p>5 / 10</p>
-        </div>
-        <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
-      </div>
-
-
-      <div class="boat">
-        <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-        </div>
-
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
-        <div class="boat__capacity">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-people"></use>
-          </svg>
-          <p>5 people</p>
-        </div>
-        <div class="boat__starter">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-switch"></use>
-          </svg>
-          <p>Electric starter</p>
-        </div>
-        <div class="boat__rating">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
-          </svg>
-          <p>5 / 10</p>
-        </div>
-        <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
-      </div>
-
-
-      <div class="boat">
-        <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-        </div>
-
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
-        <div class="boat__capacity">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-people"></use>
-          </svg>
-          <p>5 people</p>
-        </div>
-        <div class="boat__starter">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-switch"></use>
-          </svg>
-          <p>Electric starter</p>
-        </div>
-        <div class="boat__rating">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
-          </svg>
-          <p>5 / 10</p>
-        </div>
-        <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
-      </div>
-
-
-      <div class="boat">
-        <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-        </div>
-
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
-        <div class="boat__capacity">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-people"></use>
-          </svg>
-          <p>5 people</p>
-        </div>
-        <div class="boat__starter">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-switch"></use>
-          </svg>
-          <p>Electric starter</p>
-        </div>
-        <div class="boat__rating">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
-          </svg>
-          <p>5 / 10</p>
-        </div>
-        <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
-      </div>
-
-
-      <div class="boat">
-        <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-        </div>
-
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
-        <div class="boat__capacity">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-people"></use>
-          </svg>
-          <p>5 people</p>
-        </div>
-        <div class="boat__starter">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-switch"></use>
-          </svg>
-          <p>Electric starter</p>
-        </div>
-        <div class="boat__rating">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
-          </svg>
-          <p>5 / 10</p>
-        </div>
-        <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
-      </div>
-
-
-      <div class="boat">
-        <div class="boat__img">
-
-          <a data-fancybox="gallery" href="img/boat_beach.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_girl.jpg"><img src="img/boat_cave.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_thomas_30hp.jpg"></a>
-          <a data-fancybox="gallery" href="img/boat_spiros_15hp.jpg"><img src="img/boat_spiros_15hp.jpg"></a>
-        </div>
-
-        <h4 class="boat__engine"> 15 Horse Power </h4>
-        <div class="boat__license">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-certificate"></use>
-          </svg>
-          <p>Not required</p>
-        </div>
-        <div class="boat__capacity">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-people"></use>
-          </svg>
-          <p>5 people</p>
-        </div>
-        <div class="boat__starter">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite4.svg#icon-switch"></use>
-          </svg>
-          <p>Electric starter</p>
-        </div>
-        <div class="boat__rating">
-          <svg class="about__feature__icon">
-            <use xlink:href="img/sprite3.svg#icon-star"></use>
-          </svg>
-          <p>5 / 10</p>
-        </div>
-        <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
-          data-target="#exampleModalCenter">Book me</button>
-      </div>
-
-
-
+        <div class="boat">
+            <div class="boat__img">
+      
+              <a data-fancybox="gallery-2040" href="img/reg2040/reg2040-1.jpg"><img src="img/reg2040/reg2040-1.jpg"></a>
+              <a data-fancybox="gallery-2040" href="img/reg2040/reg2040-3.jpg"><img src="img/reg2040/reg2040-3.jpg"></a>
+              <a data-fancybox="gallery-2040" href="img/reg2040/reg2040-2.jpg"><img src="img/reg2040/reg2040-2.jpg"></a>
+              <a data-fancybox="gallery-2040" href="img/reg2040/reg2040-4.jpg"><img src="img/reg2040/reg2040-4.jpg"></a>
+            </div>
+      
+            <h4 class="boat__engine"> 60 Horse Power </h4>
+            <div class="boat__capacity">
+              <svg class="about__feature__icon">
+                <use xlink:href="img/sprite4.svg#icon-people"></use>
+              </svg>
+              <span class="about__feature__description">3-6 people</s>
+            </div>
+      
+            <div class="boat__starter">
+              <svg class="about__feature__icon">
+                <use xlink:href="img/sprite4.svg#icon-switch"></use>
+              </svg>
+              <span class="about__feature__description">Electric</span>
+            </div>
+            <div class="boat__rating">
+              <svg class="about__feature__icon">
+                <use xlink:href="img/sprite6.svg#icon-badge"></use>
+              </svg>
+              <span class="about__feature__description">Mimi 2040</span>
+            </div>
+            <div class="boat__price">
+              <svg class="about__feature__icon">
+                <use xlink:href="img/sprite5.svg#icon-eur"></use>
+              </svg>
+              <span class="about__feature__description">150-180</span>
+            </div>
+            <button type="button" class="btn boat__book btn-primary" data-toggle="modal"
+              data-target="#bookModalCenter">Book me</button>
+          </div>
+  
 
 
     </section>
-
-    <div class="find-us">
+ 
+    <div id="goto_find-us" class="find-us">
       <iframe src="https://www.google.com/maps/d/embed?mid=13sVW6QamyrVvEWJjzhFucfQBCf5oNpbw" width="100%" height="100%"
         class="find-us__map"></iframe>
       <div class="find-us__locations">
@@ -522,10 +485,30 @@
       </div>
 
     </div>
+ 
+    <div id="goto_gallery" class="gallery" style="height: 100vh">
+        <figure class="gallery__item gallery__item--1">
+            <img src="img/gallery/cave_swim.jpg" alt="Gallery image 1" class="gallery__img">
 
-    <div class="summer__gallery" style="height: 100vh">
-      Summer Gallery
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+            <img src="img/gallery/girl_on_boat-1.jpg" alt="Gallery image 2" class="gallery__img">
+
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+            <img src="img/gallery/dolphin.jpg" alt="Gallery image 3" class="gallery__img">
+
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+            <img src="img/gallery/girl_on_boat-3.jpg" alt="Gallery image 4" class="gallery__img">
+
+        </figure>
+
+        
+     
+  </div>
     </div>
+
     <footer class="footer" id="footer">
       <p class="copyright">
         &copy; Copyright 2019 by Spiros & Thomas Boats <br> Designed and built by <a
@@ -536,7 +519,7 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  <div class="modal fade" id="bookModalCenter" tabindex="-1" role="dialog" aria-labelledby="bookModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -568,7 +551,7 @@
           </div>
           <div class="form-group form-group-radio">
             <!-- radio buttons start-->
-            <div class="form-check form-check-radio form-check-inline" ">
+            <div class="form-check form-check-inline form-check-radio">
 
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
