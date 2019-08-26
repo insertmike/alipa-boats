@@ -4,20 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+
+  <!-- Bootstrap For Menu -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+  
+  
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- ADD FAVICON -->
-  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- FAVICON -->  
+  <link rel="shortcut icon" type="ico" href="/img/favicon.ico"/>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Fancy Box Core File -->
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <!-- Fancy Box Style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+  <!-- Core Date Picker file -->
+  <script src="./pickadate.js/lib/picker.js"></script>
+  <!-- The Date Picker -->
+  <script src="./pickadate.js/lib/picker.date.js"></script>
+  <!-- In order for the Date Picker to support old browsers -->
+  <script src="./pickadate.js/lib/legacy.js"></script>
+  <!-- Date Picker Styles -->
+  <link rel="stylesheet" href="./pickadate.js/lib/themes/classic.css">
+  <link rel="stylesheet" href="./pickadate.js/lib/themes/classic.date.css">
+  
+  <!-- Intl-Tel Stylesheet -->
+  <link rel="stylesheet" href="./intl-tell/css/intlTelInput.css">
+  <script src="./intl-tell/js/intlTelInput.js"></script>
+  <script src="./intl-tell/js/utils.js"></script>
+  
 
   <title>Acapulco Boats</title>
 </head>
@@ -540,74 +564,20 @@
             </div>
             <div class="form-group col-md-6">
                 <label class="control-label" for="date">Booking Date *</label>
-                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" required/>
+                <input class="form-control account-field-input datepicker" id="date" name="date" type="text" required/>
             </div>
             
           </div>
-          <div class="form-group">
+          <div class="form-group text-center p-1">
             <label for="inputAddress2">Mobile Number *</label>
-            <input type="number" class="form-control" pattern=".{7,16}"
-              placeholder="Including your country prefix code." name="mobile" required>
+            <input  class="form-control" type="tel" id="phone" name="phone"  requried>
           </div>
-          <div class="form-group form-group-radio">
-            <!-- radio buttons start-->
-            <div class="form-check form-check-inline form-check-radio">
 
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                  value="option2">
-                <label class="form-check-label" for="inlineRadio2" name="numPeople">1 Person</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
-                  value="option2">
-                <label class="form-check-label" for="inlineRadio2">2 Persons</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
-                  value="option2">
-                <label class="form-check-label" for="inlineRadio2">3 Persons</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
-                  value="option2">
-                <label class="form-check-label" for="inlineRadio2">4 Persons</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
-                  value="option2">
-                <label class="form-check-label" for="inlineRadio2">5 Persons</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="numPeople" id="inlineRadio2"
-                  value="option2">
-                <label class="form-check-label" for="inlineRadio2">6 Persons</label>
-              </div>
-            </div>
-            <!-- radio buttons end-->
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-7">
-              <label>Duration</label>
-              <select name="customerDuration" class="browser-default custom-select mb-4">
-                <option value="" disabled>Choose option</option>
-                <option value="1" selected>Full day</option>
-                <option value="2">Half day - 9:30am -> 1pm</option>
-                <option value="3">Half day - 1:30pm -> 5:30pm</option>
-                <option value="4">One hour</option>
-              </select>
-            </div>
-            <div class="form-group col-md-5">
-                <label for="inputAddress">Address</label>
-                <input type="password" class="form-control" id="inputAddress" name="Address" placeholder="Your hotel">
-              </div>
-           
-          </div>
           <div class="form-group">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="whatsapp-contact" name="whatsapp">
+            <div class="form-check d-flex justify-content-center">
+              <input class="form-check" type="checkbox" id="whatsapp-contact" name="whatsapp">
               <label class="form-check-label" for="whatsapp-contact">
-                Contact me on <i>Viber</i> or <i>WhatsApp</i> instead
+                Contact me on <i>Viber</i> or <i>WhatsApp</i>
               </label>
             </div>
           </div>
@@ -623,19 +593,23 @@
     </div>
   </div>
 
+  
+  
+  
   <script src="index.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
   <!-- Bootstrap Date-Picker Plugin -->
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+  
 </body>
 </body>
 
